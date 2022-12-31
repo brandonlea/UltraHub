@@ -1,0 +1,61 @@
+name: "Ultrahub"
+version: "1.0"
+api-version: 1.13
+main: dev.sha256.ultrahub.Ultrahub
+loadbefore: [Essentials]
+softdepend: [PlaceholderAPI, HeadDatabase]
+permissions:
+  ultrahub.*:
+    description: Gives access to all ultrahub permissions
+    children:
+      ultrahub.command.*: true
+      ultrahub.bypass.*: true
+      ultrahub.alert.*: true
+      ultrahub.item.*: true
+      ultrahub.player.*: true
+      ultrahub.block.*: true
+  ultrahub.command.*:
+    description: Gives access to all command permissions
+    children:
+      ultrahub.command.help: true
+      ultrahub.command.reload: true
+      ultrahub.command.scoreboard: true
+      ultrahub.command.openmenu: true
+      ultrahub.command.holograms: true
+      ultrahub.command.gamemode: true
+      ultrahub.command.gamemode.other: true
+      ultrahub.command.clearchat: true
+      ultrahub.command.lockchat: true
+      ultrahub.command.fly: true
+      ultrahub.command.fly.others: true
+      ultrahub.command.setlobby: true
+      ultrahub.command.vanish: true
+  ultrahub.bypass.*:
+    description: Gives access to all bypass permissions
+    children:
+      ultrahub.bypass.antiswear: true
+      ultrahub.bypass.commands: true
+      ultrahub.bypass.lockchat: true
+      ultrahub.bypass.antiwdl: true
+      ultrahub.bypass.doublejump: false
+  ultrahub.alert.*:
+    description: Gives access to all alert permissions
+    children:
+      ultrahub.alert.updates: true
+      ultrahub.alert.antiswear: true
+      ultrahub.alert.antiwdl: true
+  ultrahub.item.*:
+    description: Gives access to all item based permissions
+    children:
+      ultrahub.item.drop: true
+      ultrahub.item.pickup: true
+  ultrahub.player.*:
+    description: Gives access to all player based permissions
+    children:
+      ultrahub.player.pvp: true
+  ultrahub.block.*:
+    description: Gives access to all block based permissions
+    children:
+      ultrahub.block.break: true
+      ultrahub.block.place: true
+      ultrahub.block.interact: true
